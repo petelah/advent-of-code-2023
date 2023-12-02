@@ -41,14 +41,12 @@ func main() {
 func extractNum(line string) int {
 	numbers := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 	var foundNums []string
-	var counter int
 	var returnNum int
 	var convString string
 
 	for _, char := range line {
 		if slices.Contains(numbers, string(char)) {
 			foundNums = append(foundNums, string(char))
-			counter++
 		}
 	}
 
